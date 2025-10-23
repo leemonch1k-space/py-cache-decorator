@@ -3,6 +3,7 @@ from typing import Callable
 
 def cache(func: Callable) -> Callable:
     saved_cache = {}
+    
     def wrapper(*args, **kwargs) -> int:
         nonlocal saved_cache
 
